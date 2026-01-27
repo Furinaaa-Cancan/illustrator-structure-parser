@@ -1,0 +1,322 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400&family=Source+Sans+3:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* 柔和米色调 */
+    --background: 35 30% 97%;
+    --foreground: 30 15% 20%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 30 15% 20%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 30 15% 20%;
+
+    /* 沉稳藏蓝色 */
+    --primary: 215 50% 28%;
+    --primary-foreground: 35 30% 98%;
+
+    --secondary: 35 20% 93%;
+    --secondary-foreground: 30 12% 25%;
+
+    --muted: 35 15% 90%;
+    --muted-foreground: 30 10% 50%;
+
+    --accent: 35 25% 92%;
+    --accent-foreground: 30 12% 25%;
+
+    --destructive: 5 55% 42%;
+    --destructive-foreground: 35 30% 98%;
+
+    --border: 35 18% 88%;
+    --input: 35 15% 92%;
+    --ring: 215 50% 35%;
+
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-[#f5f0e8] text-[#3d2314];
+    font-family: "Source Sans 3", -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif;
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  .font-serif {
+    font-family: "Playfair Display", "Georgia", "Times New Roman", serif;
+  }
+}
+
+/* 滚动条 */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* 基础卡片 - 更柔和的阴影 */
+.card {
+  @apply bg-white border border-gray-200 rounded-lg transition-all duration-300;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+}
+
+.card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+/* 按钮样式 */
+.btn {
+  @apply inline-flex items-center justify-center px-4 py-2 text-sm font-medium rounded transition-all duration-200 cursor-pointer border-0;
+}
+
+.btn-primary {
+  @apply bg-[#1e3a5f] text-white;
+  box-shadow: 0 1px 2px rgba(30, 58, 95, 0.2);
+}
+
+.btn-primary:hover {
+  @apply bg-[#152d47];
+  box-shadow: 0 2px 6px rgba(30, 58, 95, 0.25);
+}
+
+.btn-primary:active {
+  @apply bg-[#0f1f33];
+  transform: translateY(1px);
+  box-shadow: 0 1px 2px rgba(30, 58, 95, 0.2);
+}
+
+.btn-secondary {
+  @apply bg-white text-gray-700 border border-gray-200;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.04);
+}
+
+.btn-secondary:hover {
+  @apply bg-gray-50 border-gray-300;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.06);
+}
+
+/* 输入框 */
+.input {
+  @apply w-full px-3 py-2 text-sm border border-gray-300 rounded bg-white transition-all duration-200;
+}
+
+.input:focus {
+  @apply outline-none border-[#1e3a5f] ring-1 ring-[#1e3a5f];
+  box-shadow: 0 0 0 3px rgba(30, 58, 95, 0.1);
+}
+
+/* 链接 */
+.link {
+  @apply text-[#1e3a5f] hover:text-[#152d47] transition-colors duration-200;
+}
+
+/* 状态徽章 */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full transition-colors duration-150;
+}
+
+.badge-success {
+  @apply bg-emerald-50 text-emerald-700 border border-emerald-200;
+}
+
+.badge-warning {
+  @apply bg-amber-50 text-amber-700 border border-amber-200;
+}
+
+.badge-error {
+  @apply bg-red-50 text-red-700 border border-red-200;
+}
+
+.badge-info {
+  @apply bg-blue-50 text-blue-700 border border-blue-200;
+}
+
+/* 统计卡片 */
+.stat-card {
+  @apply card p-4 text-center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.stat-card:hover {
+  transform: translateY(-2px);
+}
+
+.stat-value {
+  @apply text-2xl font-semibold text-gray-800 mt-1;
+}
+
+.stat-label {
+  @apply text-xs text-gray-500 mt-0.5;
+}
+
+/* 分隔线 */
+.divider {
+  @apply border-t border-gray-200;
+}
+
+/* 列表项 */
+.list-row {
+  @apply flex items-center justify-between py-2.5 border-b border-gray-100 last:border-0 transition-colors duration-150;
+}
+
+.list-row:hover {
+  @apply bg-gray-50;
+}
+
+/* 信息行 */
+.info-row {
+  @apply flex items-center justify-between py-2 border-b border-gray-100 last:border-0;
+}
+
+.info-label {
+  @apply text-sm text-gray-500;
+}
+
+.info-value {
+  @apply text-sm text-gray-800 font-medium;
+}
+
+/* 步骤指示器 */
+.step {
+  @apply flex items-center gap-2.5;
+}
+
+.step-circle {
+  @apply w-7 h-7 rounded-full flex items-center justify-center text-xs font-medium transition-all duration-300;
+}
+
+.step-circle.completed {
+  @apply bg-emerald-600 text-white;
+  box-shadow: 0 2px 4px rgba(16, 185, 129, 0.3);
+}
+
+.step-circle.active {
+  @apply bg-[#1e3a5f] text-white;
+  box-shadow: 0 2px 6px rgba(30, 58, 95, 0.35);
+}
+
+.step-circle.pending {
+  @apply bg-gray-100 text-gray-400;
+}
+
+.step-label {
+  @apply text-sm transition-colors duration-200;
+}
+
+.step-label.active {
+  @apply text-gray-800 font-medium;
+}
+
+.step-label.inactive {
+  @apply text-gray-400;
+}
+
+/* 图标容器 */
+.icon-wrapper {
+  @apply w-10 h-10 rounded-lg flex items-center justify-center bg-gray-100 transition-all duration-200;
+}
+
+.icon-wrapper:hover {
+  @apply bg-gray-200;
+}
+
+/* 进度条 */
+.progress-bar {
+  @apply h-1.5 bg-gray-100 rounded-full overflow-hidden;
+}
+
+.progress-fill {
+  @apply h-full bg-[#1e3a5f] rounded-full;
+  transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 标题样式 */
+.section-title {
+  @apply flex items-center gap-2 text-base font-medium text-gray-800 mb-4;
+}
+
+/* 卡片标题 */
+.card-title {
+  @apply flex items-center gap-2 text-sm font-medium text-gray-800 mb-3;
+}
+
+/* 空状态 */
+.empty-state {
+  @apply text-center py-8 text-gray-400 text-sm;
+}
+
+/* 文字颜色辅助 */
+.text-muted {
+  @apply text-gray-500;
+}
+
+.text-small {
+  @apply text-xs;
+}
+
+/* 动画 - 淡入 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.4s ease-out forwards;
+}
+
+/* 动画 - 脉冲 */
+@keyframes pulse-soft {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+.animate-pulse-soft {
+  animation: pulse-soft 2s ease-in-out infinite;
+}
+
+/* 骨架屏 */
+.skeleton {
+  @apply bg-gray-200 rounded animate-pulse;
+}
+
+/* 悬浮提示 */
+.tooltip {
+  @apply absolute z-50 px-2 py-1 text-xs text-white bg-gray-800 rounded shadow-lg;
+}
+
+/* 焦点样式 */
+.focus-ring {
+  @apply focus:outline-none focus:ring-2 focus:ring-[#1e3a5f] focus:ring-offset-2;
+}

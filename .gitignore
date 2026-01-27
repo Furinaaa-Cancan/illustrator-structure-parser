@@ -1,0 +1,49 @@
+# Dependencies
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.pyc
+
+# Build outputs
+dist/
+build/
+*.egg-info/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+
+# Environment
+.env
+.env.local
+*.log
+
+# ML artifacts
+ml_cache/
+ml_data/
+ml_models/
+*.pt
+*.pth
+*.onnx
+
+# Uploads and outputs (keep structure, ignore content)
+uploads/
+output/
+web/uploads/
+web/static/
+
+# Adobe files
+Adobe文件/
+*.ai
+*.pdf
+
+# OS files
+._*
+Thumbs.db
+
+# Claude/Windsurf
+.claude/

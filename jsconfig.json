@@ -1,0 +1,11 @@
+{
+  "compilerOptions": {
+    "checkJs": false
+  },
+  "exclude": [
+    "*.jsx",
+    "lib/**/*.jsx",
+    "output/**/*.jsx",
+    "node_modules"
+  ]
+}
