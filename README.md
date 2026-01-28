@@ -12,6 +12,18 @@
 
 [Features](#-features) • [Quick Start](#-quick-start) • [Web App](#-web-application) • [ML Service](#-ml-service) • [API](#-api-reference) • [Contributing](#-contributing)
 
+<br>
+
+### 📸 Screenshots
+
+| Web Application | Parsing Results |
+|:---------------:|:---------------:|
+| ![Web App](docs/images/web-app.png) | ![Results](docs/images/results-dashboard.png) |
+
+| Layer Structure | JSON Output |
+|:---------------:|:-----------:|
+| ![Layers](docs/images/layer-structure.png) | ![JSON](docs/images/json-output.png) |
+
 </div>
 
 ---
