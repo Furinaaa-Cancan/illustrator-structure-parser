@@ -16,13 +16,17 @@
 
 ### 📸 Screenshots
 
-| Web Application | Parsing Results |
-|:---------------:|:---------------:|
-| ![Web App](docs/images/web-app.png) | ![Results](docs/images/results-dashboard.png) |
+| Upload Interface | Results Dashboard |
+|:----------------:|:-----------------:|
+| ![Web App](docs/images/web-app.jpg) | ![Results](docs/images/results-dashboard.jpg) |
 
-| Layer Structure | JSON Output |
-|:---------------:|:-----------:|
-| ![Layers](docs/images/layer-structure.png) | ![JSON](docs/images/json-output.png) |
+| Variable Selector | Layer Structure |
+|:-----------------:|:---------------:|
+| ![Variables](docs/images/variable-selector.jpg) | ![Layers](docs/images/layer-structure.jpg) |
+
+| Batch Generator | Illustrator Script |
+|:---------------:|:------------------:|
+| ![Batch](docs/images/batch-generator.jpg) | ![Script](docs/images/illustrator-script.jpg) |
 
 </div>
 
